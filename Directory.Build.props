@@ -37,6 +37,14 @@
       to build against the ../Terminal.Gui enlistment instead (see Directory.Build.targets).
     -->
     <TerminalGuiVersion Condition="'$(TerminalGuiVersion)' == ''">2.4.18-develop.5</TerminalGuiVersion>
+
+    <!--
+      submodule 模式自动检测：如果 ../Terminal.Gui 存在（git submodule），默认用 ProjectReference
+      引用 Terminal.Gui 源码，避免与下游仓库的 ProjectReference 产生 CS1704 冲突。
+      独立构建时（无 ../Terminal.Gui）回退到 NuGet 包。
+    -->
+    <UseLocalTerminalGui Condition="'$(UseLocalTerminalGui)' == '' AND Exists('$(MSBuildThisFileDirectory)..\Terminal.Gui\Terminal.Gui\Terminal.Gui.csproj')">true</UseLocalTerminalGui>
+    <AllowLocalTerminalGuiInCI Condition="'$(AllowLocalTerminalGuiInCI)' == '' AND '$(UseLocalTerminalGui)' == 'true'">true</AllowLocalTerminalGuiInCI>
   </PropertyGroup>
 
   <ItemGroup>
