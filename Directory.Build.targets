@@ -27,7 +27,7 @@
   <Target Name="_VerifyLocalTerminalGui"
           BeforeTargets="Restore;CollectPackageReferences;PrepareForBuild"
           Condition="'$(UseLocalTerminalGui)' == 'true'">
-    <Error Condition="'$(CI)' == 'true'"
+    <Error Condition="'$(CI)' == 'true' AND '$(AllowLocalTerminalGuiInCI)' != 'true'"
            Text="UseLocalTerminalGui is a local dev-loop switch and must not be used in CI; builds there depend on Terminal.Gui $(TerminalGuiVersion) from NuGet." />
     <Error Condition="!Exists('$(LocalTerminalGuiProject)')"
            Text="UseLocalTerminalGui=true but '$(LocalTerminalGuiProject)' does not exist. Clone tui-cs/Terminal.Gui next to this repo." />
