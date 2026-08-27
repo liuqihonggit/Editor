@@ -117,7 +117,7 @@ public partial class Editor : View
     ///     Gets or sets the document text. This overrides <see cref="View.Text" /> so that setting
     ///     <c>editor.Text</c> writes to <see cref="Document" /> rather than the base View label.
     /// </summary>
-    public override string Text
+    public new string Text
     {
         get => Document?.Text ?? string.Empty;
         set

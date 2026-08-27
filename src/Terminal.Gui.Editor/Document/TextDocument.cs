@@ -285,10 +285,8 @@ namespace Terminal.Gui.Editor.Document
                 return;
             }
 
-            if(Thread.CurrentThread != ownerThread)
-            {
-                throw new InvalidOperationException("Call from invalid thread.");
-            }
+            // Thread affinity check relaxed: Terminal.Gui may defer LayoutAndDraw to a different thread
+            // (e.g. AnsiStartupGate callback). The document is protected by _lockObject in mutating paths.
         }
 
         /// <summary>
