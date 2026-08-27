@@ -1,4 +1,3 @@
-using BenchmarkDotNet.Attributes;
 using Terminal.Gui.Input;
 using Terminal.Gui.Testing;
 

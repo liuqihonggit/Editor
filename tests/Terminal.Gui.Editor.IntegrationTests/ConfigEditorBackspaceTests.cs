@@ -4,7 +4,6 @@ using Terminal.Gui.Drivers;
 using Terminal.Gui.Editor.Highlighting;
 using Terminal.Gui.Editor.IntegrationTests.Testing;
 using Terminal.Gui.Input;
-using Xunit;
 
 namespace Terminal.Gui.Editor.IntegrationTests;
 

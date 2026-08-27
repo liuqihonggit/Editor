@@ -3,8 +3,6 @@
 using System.Runtime.CompilerServices;
 using System.Text;
 using Terminal.Gui.Drivers;
-using Xunit;
-using Xunit.Sdk;
 
 namespace Terminal.Gui.Editor.IntegrationTests.Testing;
 

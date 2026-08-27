@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Logging;
-using Serilog;
 using Terminal.Gui;
 using Terminal.Gui.App;
 using Terminal.Gui.Tracing;

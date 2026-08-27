@@ -1,4 +1,3 @@
-using BenchmarkDotNet.Attributes;
 using Terminal.Gui.Editor.Document;
 
 namespace Terminal.Gui.Editor.Benchmarks;

@@ -1,6 +1,5 @@
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using BenchmarkDotNet.Running;
 using Terminal.Gui.Editor.Document;
 using Terminal.Gui.Editor.Document.Search;
 
