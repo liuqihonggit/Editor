@@ -1,6 +1,7 @@
 // Claude - claude-opus-4-7
 
 using Terminal.Gui.Drivers;
+using Xunit.Sdk;
 
 namespace Terminal.Gui.Editor.IntegrationTests.Testing;
 

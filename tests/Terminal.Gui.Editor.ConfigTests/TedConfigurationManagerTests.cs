@@ -3,6 +3,7 @@
 #pragma warning disable CS0618 // This project intentionally quarantines legacy ConfigurationManager coverage.
 using Ted;
 using Terminal.Gui.Configuration;
+using Xunit;
 using static Terminal.Gui.Configuration.ConfigurationManager;
 
 namespace Terminal.Gui.Editor.ConfigTests;
